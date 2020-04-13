@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styl.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <title>MONTANA </title>
+    <style media="screen">
+      body{
+        background-image: url('img/banner2.png');
+        background-size: cover;
+
+      }
+      form{
+        width: 400px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 30px 60px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      form input{
+          width: 130px;
+          margin-bottom: 20px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid ">
+         <!-- slider -->
+      <div class="row" id="slider">
+        <ul class="topnav" style="width: 100%" >
+          <li><a class="active" href="Montanaht.php">Home</a></li>
+          <li><a href="Montanaht.php#about">ABOUT</a></li>
+          <li><a href="Montanaht.php#offers">ROOMS</a></li>
+         
+          <li class="center"><img src="img/logo.png"></li>
+        </ul>
+        <form action="insert_booking.php" method="post">
+            <h4>From: </h4>
+            <input type="date" class="form-control" name="fromDate" id="fromDate" value="">
+            <h4>To: </h4>
+            <input type="date" class="form-control" name="toDate" id="fromDate" value="">
+            <h4>Persons.No</h4>
+            <input type="number" class="form-control" onchange="total()" name="personNo" id="personsNo" >
+            
+            <h4>Room Type</h4>
+            <select id="mySelect" class="form-control" name="rmtype" onchange="total()">
+                <option value="single">Single</option>
+                <option value="double">double</option>
+                <option value="triple">triple</option>
+            </select>
+                
+            <p id="demo" style="font-size: 18px;margin-top:5px;"></p>
+            <input id="demo1" name="totalPrice" type="text" hidden>
+
+            <input type="submit" class="btn btn-primary" value="Book">
+        </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
